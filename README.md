@@ -16,7 +16,7 @@ brew install awscli-local
 awslocal dynamodb list-tables
 
 # aws コマンドで試す場合は --endpoint-url を明示する(ポート4566に)
-aws dynamodb delete-table --table-name SampleTable --endpoint-url http://localhost:4566
+aws dynamodb list-tables --endpoint-url http://localhost:4566
 ```
 
 ### dynamodbのテーブル操作

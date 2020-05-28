@@ -3,6 +3,8 @@ services:
   localstack:
     image: localstack/localstack:latest
     ports:
+      # 4566で全サービス接続するのが推奨らしい。
+      # 他のポートは今は非推奨だが、awscli-localがまだそちらのポートで見ようとするので開けておく
       - '4563-4584:4563-4584'
     environment:
       - SERVICES=dynamodb
